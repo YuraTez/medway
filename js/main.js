@@ -53,4 +53,6 @@ $(".btn-scroll-top").on("click", function (){
         top: 0,
         behavior: 'smooth'
     });
-})
+});
+
+$('.custom-select').styler();

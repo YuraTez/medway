@@ -55,7 +55,10 @@ $(".btn-scroll-top").on("click", function (){
     });
 });
 
-$('.custom-select').styler();
+if($('.custom-select').length){
+    $('.custom-select').styler();
+}
+
 
 $('#product-card').slick({
     infinite: true,
@@ -69,4 +72,50 @@ $('#product-card').slick({
     nextArrow: '<div class="next"><svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">\n' +
         '<path d="M14 5.47891C13.9952 5.66584 13.9389 5.77851 13.8668 5.85934L9.9103 10.7289C9.72341 10.9924 9.2999 11.0341 9.03512 10.8201C8.77035 10.6062 8.75628 10.2061 8.96872 9.96805L12.1168 6.0876L0.608695 6.0876C0.272513 6.0876 4.49523e-07 5.81509 4.78913e-07 5.47891C5.08303e-07 5.14273 0.272513 4.87021 0.608695 4.87021L12.1168 4.87021L8.96872 0.989786C8.72775 0.749352 8.79623 0.327554 9.05059 0.101302C9.24639 -0.0728456 9.76823 -0.0173598 9.9103 0.228918L13.8668 5.09848C13.9698 5.2246 14.0012 5.3184 14 5.47891Z"/>\n' +
         '</svg>\n</div>'
+});
+
+const questionsList = document.querySelectorAll(".questions-item-header");
+
+if(questionsList !== null){
+    questionsList.forEach((el)=>{
+        el.addEventListener("click",function (){
+            el.classList.toggle("active");
+            $(this).siblings().slideToggle( "slow" );
+        })
+    })
+}
+
+const vacanciesList = document.querySelectorAll(".vacancies-list__btn");
+
+if(vacanciesList !== null){
+    vacanciesList.forEach((el)=>{
+        el.addEventListener("click",function (){
+            el.classList.toggle("active");
+            $(this).parent().find(".vacancies-list__body").slideToggle( "slow" );
+        })
+    })
+}
+
+const maskPhone = () => {
+    $("#phone").mask("+375 (99) 999-99-99");
+}
+
+maskPhone()
+
+$("#fl_nm").on("input", function (){
+    $(".fl_upld-file").text($(this)[0].files[0].name)
+})
+
+$(".job-response").on("click" , function (){
+    $(".modal-form").addClass("active");
+    $(".overlay").addClass("active");
+});
+
+$(".modal-cross , .overlay").on("click" , function (){
+    $(".modal-form").removeClass("active");
+    $(".overlay").removeClass("active");
+});
+
+$(".form-vacation").on("submit" , function (event){
+    event.preventDefault();
 });

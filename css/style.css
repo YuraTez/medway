@@ -12,6 +12,7 @@
   font-family: 'Mulish', sans-serif;
   font-size: 13px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  font-weight: 500;
 }
 
 .page {
@@ -60,7 +61,8 @@
 .nav-list a,
 .pharmacy-link {
   color: #003675;
-  font-weight: 300;
+  /*font-weight: 300;*/
+  font-weight: 500;
   transition: 0.3s;
 }
 

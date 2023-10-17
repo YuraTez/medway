@@ -18,7 +18,8 @@ document.addEventListener("scroll", function (){
 })
 
 $(".burger").on("click",function (){
-    $(this).toggleClass("active")
+    $("body").toggleClass("no-scroll");
+    $(this).toggleClass("active");
     $(".header-top").toggleClass("active");
 })
 
@@ -41,7 +42,7 @@ $(".search-cross").on("click" , function (){
 
 document.addEventListener("scroll", function (){
     const positionTop = window.pageYOffset
-    if(positionTop > 1000){
+    if(positionTop > 500){
         $(".btn-scroll-top").addClass("active");
     }else{
         $(".btn-scroll-top").removeClass("active");

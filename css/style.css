@@ -15,6 +15,10 @@
   font-weight: 500;
 }
 
+body.no-scroll{
+  overflow: hidden;
+}
+
 .page {
   padding-top: 139px;
 }
@@ -221,6 +225,14 @@
   margin-bottom: 6px;
 }
 
+.dark-text .main-slider__title{
+  color: #001023;
+}
+
+.dark-text .main-slider__subtitle{
+  color: #001023;
+}
+
 .main-slider__subtitle {
   color: #fff;
   font-size: 15px;
@@ -305,6 +317,7 @@
 }
 
 .sticky-block-img {
+  display: block;
   position: relative;
   height: 316px;
   border-radius: 10px;
@@ -506,6 +519,7 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 13px;
+  color: rgba(0, 48, 104, 0.7);
 }
 
 .news-item__description {
@@ -1503,7 +1517,6 @@ select.custom-select {
 .jq-selectbox__dropdown {
   position: absolute;
   height: min-content !important;
-  overflow-y: scroll;
   top: 44px !important;
   width: 100% !important;
   border-radius: 6px;
@@ -2951,7 +2964,6 @@ input[type="checkbox"]{
   font-size: 20px;
   font-weight: 800;
   margin-bottom: 15px;
-  min-height: 50px;
 }
 
 .contact-item__doc{
@@ -2983,6 +2995,10 @@ input[type="checkbox"]{
   flex-shrink: 1;
 }
 
+.contact-item__el__title{
+  font-weight: 700;
+}
+
 .contact-item__el__text{
   display: flex;
   flex-direction: column;
@@ -3003,12 +3019,20 @@ input[type="checkbox"]{
   color: #001023;
 }
 
+.phone-list__item strong{
+  font-weight: 700;
+}
+
 .bank-data{
   margin-top: 15px;
 }
 
 .bank-data__el{
   color: #001023;
+}
+
+.bank-data__el strong{
+  font-weight: 700;
 }
 
 .form-group--checkbox{
@@ -3123,7 +3147,7 @@ input[type="checkbox"]{
 }
 
 @media (min-width: 1024px) {
-  .pharmacy-table__recipe{
+  .pharmacy-table-product--big .pharmacy-table__recipe{
     display: none;
   }
 
@@ -3272,7 +3296,12 @@ input[type="checkbox"]{
   .map-content{
     height: 382px;
   }
+
+  .job-response{
+   width: 100%;
+  }
 }
+
 
 
 

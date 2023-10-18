@@ -2980,6 +2980,10 @@ input[type="checkbox"]{
   margin-bottom: 15px;
 }
 
+.contact-item__license strong{
+  font-weight: 700;
+}
+
 .contact-item-inner{
   border-radius: 6px;
   background: #F1F5FA;
